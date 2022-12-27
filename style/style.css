@@ -1,12 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Prosto+One&display=swap");
+
 body,
 html {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Prosto One", cursive, sans-serif;
   background: url(../assets/img/bg.jpg) repeat center center fixed;
   background-size: cover;
   color: #fff;
@@ -59,6 +62,11 @@ ul > li {
   padding: 1em;
   margin: 1.4em 0;
   box-shadow: rgba(28, 32, 93 / 24%) 0 2px 8px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+ul > li:hover {
+  transform: scaleX(0.95);
 }
 
 ul > li > a {
@@ -69,4 +77,56 @@ ul > li > a {
   justify-content: center;
   align-items: center;
   gap: 0.5em;
+}
+
+form legend {
+  border-bottom: 3px solid #d55d0e;
+}
+
+form div.invalid-feedback {
+  background: #fffa;
+  backdrop-filter: blur(10px) saturate(160%) contrast(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(160%) contrast(180%);
+  border-radius: 10em;
+  padding: 3px;
+  margin: 2px 0;
+  max-width: 300px;
+  box-shadow: rgba(28, 32, 93 / 24%) 0 2px 8px 0;
+}
+
+.btn {
+  background-image: linear-gradient(
+    45deg,
+    #ff512f 0%,
+    #f09819 51%,
+    #ff512f 100%
+  );
+}
+
+.btn {
+  max-width: 250px;
+  text-transform: uppercase;
+  transition: 0.5s ease-in-out;
+  background-size: 200% auto;
+  border: none;
+  color: white;
+  font-weight: 700;
+}
+
+.btn:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+div.hidden {
+  display: none;
+}
+
+div.visible {
+  display: block;
 }
